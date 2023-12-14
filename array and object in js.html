@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array and object</title>
+</head>
+<body>
+    <div class="container">
+        simple the html
+    </div>
+    <script>
+        let myvar = 34;
+        let myvar1 = 'string';
+        let myvar2 = true;
+        let myvar3 = null;
+        let myvar4 = undefined;
+
+        let employee = {
+            name : 'jaydip',
+            salary : 10,
+            age: 25,
+            gender: 'male'
+        }
+        console.log(employee)
+
+        // let names = [1,2,3,'jaydip',undefined]
+        let names = new Array(1,2,3,'jaydip',undefined)
+        console.log(names.length)
+        names = names.sort();
+        names.push('this is puch')
+        console.log(names)
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="DIgital clock.css">
+</head>
+
+<body class="bg-body">
+    <div class="bg">
+        <div class="header">
+            <div class="head-1">
+                <img src="" width="150px">
+
+
+            </div>
+            <div class="head-2">
+                <div class="up">
+                    <span class="up">TIME</span>
+
+                </div>
+
+
+                <div class="container">
+                    <img src="img/timeline.svg" alt="">
+                    <div class="content2">
+                        <span onload="updateTime()" id="hour" class="hour">00
+                        </span>
+
+                        <span class="tittle1">hours</span>
+                    </div>
+                </div>
+                <span class="dot">:</span>
+
+                <div class="container">
+                    <img src="./img/timeline.svg">
+                    <div class="content2">
+                        <span onload="updateTime()" id="minutes" class="hour">00</span>
+                        <br>
+                        <span class="tittle1">mins</span>
+                    </div>
+                </div>
+                <span class="dot">:</span>
+                <div class="container">
+                    <img src="./img/timeline.svg">
+                    <div class="content2">
+                        <span onload="updateTime()" id="seconds" class="hour">00</span>
+                        <br>
+                        <span class="tittle1">sec</span>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <img src="img/am-pm.svg" class="lastbox">
+                    <div class="content2">
+                        <span onload="updateTime()" id="meridiem" class="meridiem">00</span>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="header">
+
+            <div class="content">
+                <div class="title">
+                    <p><img src="img/sun.png" width="50px" class="icon"> Set wake up time</p>
+                    <p> <img src="img/lunch.png" width="50px" class="icon">Set Lunch time</p>
+                    <p> <img src="img/nap.png" width="50px" class="icon">Set Nap time</p>
+                </div>
+
+
+                <div class="form">
+                    <select name="" id="setWakeTime" onchange="setImage(this);">
+                        <option value="">select time below</option>
+                        <option value="img/day.jpg">1AM - 2AM</option>
+                        <option value="img/day.jpg">2PM - 3AM</option>
+                        <option value="img/day.jpg">3PM - 4AM</option>
+                        <option value="img/day.jpg">4PM - 5AM</option>
+                        <option value="img/day.jpg">5PM - 6AM</option>
+                        <option value="img/day.jpg">6PM - 7AM</option>
+                        <option value="img/day.jpg">7PM - 8AM</option>
+                        <option value="img/day.jpg">8AM - 9AM</option>
+                        <option value="img/day.jpg">9AM - 10AM</option>
+                        <option value="img/day.jpg">10AM - 11AM</option>
+                        <option value="img/dayyy.jpg">11AM - 12PM</option>
+                        <option value="img/dayyy.jpg">12PM - 1PM</option>
+                        <option value="img/dayyy.jpg">1PM - 2PM</option>
+                        <option value="img/dayyy.jpg">2PM - 3PM</option>
+                        <option value="img/dayyy.jpg">3PM - 4PM</option>
+                        <option value="img/dayyy.jpg">4PM - 5PM</option>
+                        <option value="img/dayyy.jpg">5PM - 6PM</option>
+                        <option value="img/dayyy.jpg">6PM - 7PM</option>
+                        <option value="img/dayyy.jpg">7PM - 8PM</option>
+                        <option value="img/dayyy.jpg">8PM - 9PM</option>
+                        <option value="img/dayyy.jpg">9PM - 10PM</option>
+                        <option value="img/dayyy.jpg">10PM - 11PM</option>
+                        <option value="img/dayyy.jpg">11PM - 12AM</option>
+
+                    </select>
+
+                    <p>
+
+                        <select name="" id="setLunchTime" onchange="setImage(this);">
+                            <option value="default">select time below</option>
+                            <option value="img/day.jpg">8AM - 9AM</option>
+                            <option value="img/day.jpg">9AM - 10AM</option>
+                            <option value="img/day.jpg">10AM - 11AM</option>
+                            <option value="img/day.jpg">11AM - 12PM</option>
+                            <option value="img/day.jpg">12PM - 1PM</option>
+                            <option value="img/day.jpg">1PM - 2PM</option>
+                            <option value="img/day.jpg">2PM - 3PM</option>
+                            <option value="img/day.jpg">3PM - 4PM</option>
+                            <option value="img/day.jpg">4PM - 5PM</option>
+                            <option value="img/day.jpg">5PM - 6PM</option>
+                            <option value="img/dayyy.jpg">6PM - 7PM</option>
+                            <option value="img/dayyy.jpg">7PM - 8PM</option>
+                            <option value="img/dayyy.jpg">8PM - 9PM</option>
+                            <option value="img/dayyy.jpg">9PM - 10PM</option>
+                            <option value="img/dayyy.jpg">10PM - 11PM</option>
+                            <option value="img/dayyy.jpg">11PM - 12AM</option>
+                            <option value="img/dayyy.jpg">1AM - 2AM</option>
+                            <option value="img/dayyy.jpg">2PM - 3AM</option>
+                            <option value="img/dayyy.jpg">3PM - 4AM</option>
+                            <option value="img/dayyy.jpg">4PM - 5AM</option>
+                            <option value="img/dayyy.jpg">5PM - 6AM</option>
+                            <option value="img/dayyy.jpg">6PM - 7AM</option>
+                            <option value="img/dayyy.jpg">7PM - 8AM</option>
+
+                        </select>
+                    </p>
+                    <p>
+                        <select name="setNapTime" id="setNapTime" onchange="setImage(this);">
+                            <option value="default">select time below</option>
+                            <option value="img/day.jpg">8AM - 9AM</option>
+                            <option value="img/day.jpg">9AM - 10AM</option>
+                            <option value="img/day.jpg">10AM - 11AM</option>
+                            <option value="img/day.jpg">11AM - 12PM</option>
+                            <option value="img/day.jpg">12PM - 1PM</option>
+                            <option value="img/day.jpg">1PM - 2PM</option>
+                            <option value="img/day.jpg">2PM - 3PM</option>
+                            <option value="img/day.jpg">3PM - 4PM</option>
+                            <option value="img/day.jpg">4PM - 5PM</option>
+                            <option value="img/day.jpg">5PM - 6PM</option>
+                            <option value="img/day.jpg">6PM - 7PM</option>
+                            <option value="img/day.jpg">7PM - 8PM</option>
+                            <option value="img/dayyy.jpg">8PM - 9PM</option>
+                            <option value="img/dayyy.jpg">9PM - 10PM</option>
+                            <option value="img/dayyy.jpg">10PM - 11PM</option>
+                            <option value="img/dayyy.jpg">11PM - 12AM</option>
+                            <option value="img/dayyy.jpg">1AM - 2AM</option>
+                            <option value="img/dayyy.jpg">2PM - 3AM</option>
+                            <option value="img/dayyy.jpg">3PM - 4AM</option>
+                            <option value="img/dayyy.jpg">4PM - 5AM</option>
+                            <option value="img/dayyy.jpg">5PM - 6AM</option>
+                            <option value="img/dayyy.jpg">6PM - 7AM</option>
+                            <option value="img/dayyy.jpg">7PM - 8AM</option>
+                        </select>
+                    </p>
+
+                    <button  class="greeting btn" type onload="updateTime()" id="greeting">updateTime</button>
+                    <br>
+                    <button class="btn" id="btn1" type="submit" onclick="setTimer()">Set Time</button>
+                 
+                </div>
+            </div>
+
+                <div class="contect1">
+                    <img name="image-swap" class="img1" src="img/dayyy.jpg">
+                </div>
+            
+        </div>
+
+
+    <div id="greet" style="display: block;">
+        <h2 id="wakeupTime"> </h2>
+        <h2 id="lunchTime"> </h2>
+        <h2 id="napTime"> </h2>
+
+    </div>
+</div>
+
+</body>
+<script type="text/javascript" src="Digital clock.js"></script>
+
+</html>
